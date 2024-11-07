@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- activity_Colocviu1_1_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
 
-</PreferenceScreen>
+    <!-- Zona de butoane pentru punctele cardinale -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <!-- Buton Nord -->
+        <Button
+            android:id="@+id/btn_north"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="North"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
+
+        <!-- Buton Vest -->
+        <Button
+            android:id="@+id/btn_west"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="West"
+            android:layout_toLeftOf="@id/btn_north"
+            android:layout_alignTop="@id/btn_north"
+            android:layout_marginRight="50dp"/>
+
+        <!-- Buton Est -->
+        <Button
+            android:id="@+id/btn_east"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="East"
+            android:layout_toRightOf="@id/btn_north"
+            android:layout_alignTop="@id/btn_north"
+            android:layout_marginLeft="50dp"/>
+
+        <!-- Buton Sud -->
+        <Button
+            android:id="@+id/btn_south"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="South"
+            android:layout_below="@id/btn_north"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"/>
+    </RelativeLayout>
+
+    <!-- TextView pentru a afișa textul apăsat -->
+    <TextView
+        android:id="@+id/tv_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pressed: "
+        android:layout_marginTop="20dp" />
+
+    <!-- Buton pentru a naviga la a doua activitate -->
+    <Button
+        android:id="@+id/btn_navigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NAVIGATE TO SECONDARY ACTIVITY"
+        android:layout_marginTop="40dp"/>
+</LinearLayout>
